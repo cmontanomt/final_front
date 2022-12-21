@@ -87,7 +87,7 @@ class PageMarcadores extends Component {
     peticionPost = async () => {
         delete this.state.form.mar_id //esto borra el campo usu_id
         await axios.post(url, this.state.form).then(response => {
-            //console.log(response);
+            console.log(response);
             this.modalInsertar()
             this.peticionGet()
         }).catch(error => {
@@ -187,7 +187,7 @@ class PageMarcadores extends Component {
 
                                     <div className="App ">
                                         <div className="d-grid gap-2 col-6 mx-auto">
-                                            <button className="btn btn-success" onClick={() => { this.setState({ form: {dep_id:1,equi_id1:1,equi_id2:1, mar_fecharegistro:new Date().toJSON().slice(0, 10),mar_horaregistro: new Date().toJSON().slice(11, 16),usu_id: cookies.get("usu_id")}, tipoModal: 'insertar' }); this.modalInsertar(); }} >Agregar Marcador</button>
+                                            <button className="btn btn-success" onClick={() => { this.setState({ form: {dep_id:1,equi_id1:1,equi_id2:1, mar_fecharegistro:new Date().toJSON().slice(0, 10),mar_horaregistro: new Date().setHours(new Date().getHours() - 5).toJSON().slice(11,16),usu_id: cookies.get("usu_id")}, tipoModal: 'insertar' }); this.modalInsertar(); }} >Agregar Marcador</button>
                                         </div>
                                     </div>
                                 </div>
