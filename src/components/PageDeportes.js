@@ -7,7 +7,8 @@ import React, { Component } from 'react';
 import Cookies from 'universal-cookie'
 const cookies = new Cookies();
 
-const url = 'http://localhost:9000/api/deportes'
+var url_base = "http://150.230.185.202:9000"
+const url = url_base + '/api/deportes'
 const field_id = '/dep_id/'
 
 

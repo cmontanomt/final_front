@@ -7,7 +7,8 @@ import React, { Component } from 'react';
 import Cookies from 'universal-cookie'
 const cookies = new Cookies();
 
-const url = 'http://localhost:9000/api/equipos'
+var url_base = "http://150.230.185.202:9000"
+const url = url_base + '/api/equipos'
 const field_id = '/equi_id/'
 
 class PageEquipos extends Component {

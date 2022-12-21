@@ -4,8 +4,8 @@ import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import axios from 'axios'
 import Cookies from 'universal-cookie'
 
-const urlLogin = "http://localhost:9000/api/usuarios"
-
+var url_base = "http://150.230.185.202:9000"
+const urlLogin = url_base + '/api/usuarios'
 
 const cookies = new Cookies();
 

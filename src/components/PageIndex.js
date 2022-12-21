@@ -5,6 +5,7 @@ import { faEdit, faSearch, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import "bootstrap/dist/css/bootstrap.min.css";//
 import { toHaveAccessibleDescription } from '@testing-library/jest-dom/dist/matchers';
 
+var url_base = "http://150.230.185.202:9000"
 var urlEventos
 
 class PageIndex extends Component {
@@ -19,8 +20,8 @@ class PageIndex extends Component {
 
 
     peticionGet = () => {
-        if (this.state.form.dep_nombre==="all") urlEventos = 'http://localhost:9000/api/eventos/10'
-        else urlEventos= 'http://localhost:9000/api/eventos/'+this.state.form.dep_nombre+'/5'
+        if (this.state.form.dep_nombre==="all") urlEventos = url_base + '/api/eventos/10'
+        else urlEventos= url_base + '/api/eventos/'+this.state.form.dep_nombre+'/5'
         axios.get(urlEventos).then(response => {
             //console.log(response.data);
             this.setState({ data: response.data })
@@ -30,7 +31,7 @@ class PageIndex extends Component {
     }
 
     peticionGetDeportes = () => {
-        let url = 'http://localhost:9000/api/deportes'
+        let url = url_base+'/api/deportes'
         axios.get(url).then(response => {
             //console.log(response.data);
             //data_deportes = response.data
