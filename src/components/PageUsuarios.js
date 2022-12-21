@@ -154,7 +154,7 @@ class PageUsuarios extends Component {
                                                         <tr>
                                                             <td>{usuario.usu_id}</td>
                                                             <td>{usuario.usu_email}</td>
-                                                            <td>{"*".repeat(usuario.usu_clave.length)}</td>
+                                                            <td>{"**********"}</td>
                                                             <td>{usuario.usu_nombres}</td>
                                                             <td>{usuario.usu_apellidos}</td>
                                                             <td>{usuario.usu_rol}</td>
