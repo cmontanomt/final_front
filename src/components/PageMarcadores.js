@@ -63,7 +63,7 @@ class PageMarcadores extends Component {
     }
     
     peticionGetDeportes = () => {
-        let url = 'http://localhost:9000/api/deportes'
+        let url = url_base + '/api/deportes'
         axios.get(url).then(response => {
             //console.log(response.data);
             data_deportes = response.data
@@ -74,7 +74,7 @@ class PageMarcadores extends Component {
     }
 
     peticionGetEquipos = () => {
-        let url = 'http://localhost:9000/api/equipos'
+        let url = url_base + '/api/equipos'
         axios.get(url).then(response => {
             //console.log(response.data);
             data_equipos = response.data
